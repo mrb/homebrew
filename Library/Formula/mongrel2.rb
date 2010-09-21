@@ -6,7 +6,7 @@ class Mongrel2 <Formula
   md5 '62ae9294840d7c5e026c70c9efd40324'
   
   depends_on 'zeromq'
-  depends_on 'sqlite'
+  depends_on 'sqlite' if MACOS_VERSION <= 10.5
 
   def install
     system "make all"
